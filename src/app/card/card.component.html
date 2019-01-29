@@ -1,0 +1,21 @@
+<ul class="main-cards" *ngIf="cards && cards.length > 0">
+   <li *ngFor="let popular of cards" class="movies-card-list">
+    <article class="movies-card">
+      <a routerLink="{{detailsLink}}{{popular.id}}" title="{{popular.title}}" >
+        <img class="card-image" src="{{urlImages}}{{popular.poster_path}}" alt="{{popular.title}}">
+      </a>
+      <div class="card-article">
+        <p class="card-title">
+          <a class="card-title-link" routerLink="{{detailsLink}}{{popular.id}}" >{{popular.title}}</a>
+        </p>
+        <p class="card-genres">
+          <span *ngFor="let genresList of getGenres(popular.genre_ids)"> {{genresList}}</span>
+        </p>
+      </div>
+    </article>
+    <div class="card-action">
+      <app-favorite-button [card]="popular" (clickBtn)="clickFavorites()"></app-favorite-button>
+    </div>
+  </li>
+</ul>
+

@@ -1,0 +1,16 @@
+<app-main [title]="title"
+          [spinner]="spinner"
+          [dialogError]="error"
+          (scrollChange)="scroll($event)">
+  <div *ngIf="popularMovies && !error">
+    <div>
+      <app-search (search)="search($event)"></app-search>
+    </div>
+    <div>
+      <app-card [cards]="popularMovies.results"></app-card>
+    </div>
+     <div *ngIf="popularMovies.results.length === 0">
+      <p class="main-none-text">{{movesNotFoundedText}}</p>
+    </div>
+  </div>
+</app-main>

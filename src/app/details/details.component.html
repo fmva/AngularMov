@@ -1,0 +1,40 @@
+<app-main [title]="title"
+          [spinner]="spinner"
+          [dialogError]="error"
+          (scrollChange)="scroll($event)">
+  <div>
+    <div class="details-content">
+      <div class="details-card-content" *ngIf="details && favoriteCard">
+        <article class="detail-text">
+          <div>
+            <img class="detail-image" src="{{urlImages}}{{details.poster_path}}" alt="{{details.title}}">
+          </div>
+          <div class="detail-description">
+            <p class="detail-title">{{details.title}} {{this.year}}</p>
+            <p class="detail-genres">
+              <span *ngFor="let genresList of getGenres(details.genres)"> {{genresList}}</span>
+            </p>
+            <p class="detail-raiting" *ngIf="details.vote_average">
+              {{details.vote_average}}
+            </p>
+            <p class="detail-tagline" *ngIf="details.tagline">
+              {{details.tagline}}
+            </p>
+            <p class="detail-overview" *ngIf="details.overview">
+              {{details.overview}}
+            </p>
+          </div>
+        </article>
+        <div class="detail-favorite-btn-content">
+         <app-favorite-button [card]="favoriteCard"></app-favorite-button>
+        </div>
+      </div>
+      <div class="details-header-recommendation" *ngIf="recommendationMovies && recommendationMovies.results.length > 0">
+        {{RecommendationTitle}}
+      </div>
+      <div class="details-recommendation" *ngIf="recommendationMovies && recommendationMovies.results.length > 0">
+        <app-card [cards]="recommendationMovies.results"></app-card>
+      </div>
+    </div>
+  </div>
+</app-main>

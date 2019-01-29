@@ -1,0 +1,36 @@
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.favorite-button {
+  background-color: #1eb3e4;
+  color: black;
+  border: 1px solid #008CBA;
+}
+
+.favorite-button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.remove-button {
+  background-color: #f9d038;
+  color: black;
+  border: 1px solid #F9B247;
+}
+
+.remove-button:hover {
+  background-color: #F9B247;
+  color: white;
+}

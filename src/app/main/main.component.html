@@ -1,0 +1,10 @@
+<app-header [title]="title"></app-header>
+<main>
+  <app-spinner [visible]="spinner"></app-spinner>
+  <div class="main-center" (scroll)="onScrollChange($event)">
+    <div class="main-center-into">
+     <ng-content></ng-content>
+    </div>
+  </div>
+  <app-dialog [visible]="dialogError" [text]="dialogError"></app-dialog>
+</main>

@@ -1,0 +1,72 @@
+.details-content{
+  padding: 10px;
+}
+
+.details-content > div{
+  padding: 10px;
+}
+
+.details-card-content{
+  display: flex;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  justify-content: space-between;
+}
+
+.detail-text{
+  width:100%;
+  display: flex;
+}
+
+.detail-favorite-btn-content{
+  width:100px;
+  padding: 0 5px;
+}
+
+.detail-text > div:last-child{
+  padding-left: 10px;
+}
+
+.detail-image{
+  width: 200px;
+}
+
+.detail-title{
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 0.8;
+}
+
+.detail-genres{
+  font-size: 0.8em;
+  color: #436bb3;
+  padding-top: 10px;
+}
+
+.detail-raiting{
+  font-size: 1.5em;
+  color: green;
+  padding-top: 10px;
+  text-decoration: underline;
+
+}
+
+.detail-tagline{
+  font-size: 1.1em;
+  color: rgba(101, 21, 18, 0.84);
+  padding-top: 20px;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.detail-overview{
+  font-size: 1em;
+  padding-top: 20px;
+}
+
+.details-header-recommendation{
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(142, 131, 131, 0.87);
+  width: 100%;
+}
+

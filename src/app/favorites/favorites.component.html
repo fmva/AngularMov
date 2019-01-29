@@ -1,0 +1,13 @@
+<app-main [title]="title"
+          [spinner]="spinner"
+          [dialogError]="error" >
+  <div *ngIf="favoriteMovies && !error">
+   <div>
+      <app-card [cards]="favoriteMovies" (clickBtnFavorites)="clickFavorites()"></app-card>
+    </div>
+    <div *ngIf="favoriteMovies.length === 0">
+      <p class="main-none-text">{{movesNotFoundedText}}</p>
+    </div>
+  </div>
+</app-main>
+
