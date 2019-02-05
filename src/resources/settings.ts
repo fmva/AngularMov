@@ -4,6 +4,7 @@ interface SettingInterface {
   urlSearch: string;
   urlDetails: string;
   urlRecommendations: string;
+  urlCredits: string;
   urlImages: string;
   apiKey: string;
   language: string;
@@ -24,6 +25,7 @@ export const SETTINGS: SettingInterface = {
   urlSearch: 'https://api.themoviedb.org/3/search/movie',
   urlDetails: 'https://api.themoviedb.org/3/movie',
   urlRecommendations: 'https://api.themoviedb.org/3/movie/{movie_id}/recommendations',
+  urlCredits: 'https://api.themoviedb.org/3/movie/{movie_id}/credits',
   urlImages: 'https://image.tmdb.org/t/p/w500',
   apiKey: '22ff5aef4014cb5dc72ee01c851e667b',
   language: 'ru-RU',

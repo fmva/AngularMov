@@ -3,6 +3,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {SETTINGS} from '../resources/settings';
 import {DetailsInterface} from '../resources/DetailsInterface';
 import {PopularMoviesInterface} from '../resources/PopularMoviesInterface';
+import {CreditsInterface} from '../resources/CreditsInterface';
 
 @Injectable({ providedIn: 'root' })
 
@@ -38,4 +39,17 @@ export class DetailsService {
     };
     return this.http.get<PopularMoviesInterface>(SETTINGS.urlRecommendations.replace('{movie_id}', id.toString()) , options);
   }
+
+  /**
+   * Request to server for credits' movie
+   * @param id - identifier of movie
+  */
+  getCredits(id: number) {
+    const options = {
+      params: new HttpParams()
+        .set(SETTINGS.paramApiKey, SETTINGS.apiKey)
+    };
+    return this.http.get<CreditsInterface>(SETTINGS.urlCredits.replace('{movie_id}', id.toString()) , options);
+  }
+
 }

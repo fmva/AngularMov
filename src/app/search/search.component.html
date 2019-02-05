@@ -1,5 +1,5 @@
 <form class="search-form">
   <mat-form-field class="search-mat-form">
-    <input matInput placeholder="{{searchFieldText}}" (keyup)="onSearchChange($event.target.value)" maxlength="200">
+    <input matInput placeholder="{{searchFieldText}}" (input)="onSearchChange($event.target.value)" maxlength="200">
   </mat-form-field>
 </form>
