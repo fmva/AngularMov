@@ -1,12 +1,12 @@
 <ul class="main-cards" *ngIf="cards && cards.length > 0">
    <li *ngFor="let popular of cards" class="movies-card-list">
     <article class="movies-card">
-      <a routerLink="{{detailsLink}}{{popular.id}}" title="{{popular.title}}" >
+      <a [routerLink]="[detailsLink, popular.id]" title="{{popular.title}}" >
         <img class="card-image" src="{{urlImages}}{{popular.poster_path}}" alt="{{popular.title}}">
       </a>
       <div class="card-article">
         <p class="card-title">
-          <a class="card-title-link" routerLink="{{detailsLink}}{{popular.id}}" >{{popular.title}}</a>
+          <a class="card-title-link" routerLink="[detailsLink, popular.id]" >{{popular.title}}</a>
         </p>
         <p class="card-genres">
           <span *ngFor="let genresList of getGenres(popular.genre_ids)"> {{genresList}}</span>

@@ -36,7 +36,7 @@ export const SETTINGS: SettingInterface = {
   favoriteStorage: 'favorites',
   mainLink: '/main',
   favoritesLink: '/favorites',
-  detailsLink: '/details/'
+  detailsLink: '/details'
 };
 
 
